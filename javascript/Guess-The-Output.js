@@ -1405,11 +1405,11 @@ function MCQ49() {
   let age = "24";
   const player = "Virat";
 
-  {
-    var name = "JC";
-    let age = "25";
-    const player = "VK";
-  }
+{
+  var name = "JC";
+  let age = "25";
+  const player = "VK";
+}
 
   console.log(name);
   console.log(age);
