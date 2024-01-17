@@ -1,4 +1,4 @@
-package Java;
+package Java.arrays;
 
 public class Sort0and1 {
     public static void main(String[] args) {

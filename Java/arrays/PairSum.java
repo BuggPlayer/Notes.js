@@ -1,4 +1,4 @@
-package Java;
+package Java.arrays;
 
 public class PairSum {
  public static void pairsum02(){
