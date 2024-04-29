@@ -12,7 +12,7 @@ public class LectureNotes {
         //TODO STACK AND HEAP explore
 
 
-        // update --> String are immutibale(cannt be modify oe changed)
+        // up     date --> String are immutibale(cannt be modify oe changed)
         String s1 = "abc";
         String s2 = "abc";
 
@@ -57,3 +57,7 @@ public class LectureNotes {
         methods();
     }
 }
+
+
+rafce
+rfce
