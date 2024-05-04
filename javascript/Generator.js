@@ -1,6 +1,7 @@
 /* 💡"JavaScript-with-JC"
 👉 Generator  
-Generator is a function that can be paused and resumed from where it was paused. It is written as the function keyword followed by an asterisk (*).
+Generator is a function that can be paused and resumed from where it was paused.
+ It is written as the function keyword followed by an asterisk (*).
 Generator returns a Generator object that is used by calling the next method.
 
 💡 Use cases :-
