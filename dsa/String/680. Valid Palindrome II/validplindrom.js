@@ -40,3 +40,5 @@ function isVlaid(str) {
   return false;
 }
 console.log(isVlaid("abca"));
+
+// redux store 
