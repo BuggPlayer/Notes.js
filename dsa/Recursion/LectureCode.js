@@ -27,15 +27,16 @@ function claimingStair(n) {
 // main1();
 // console.log(claimingStair(3));
 
+/* 
 function arrayRecus(arr, n, i, maxi) {
   //basecase
-  if (i >= n) return;
+  if (i >= n) return maxi;
 
   if (arr[i] > maxi) {
     maxi = arr[i];
   }
-  console.log("maxi", maxi);
-  arrayRecus(arr, n, i + 1, maxi);
+
+  return arrayRecus(arr, n, i + 1, maxi);
 }
 
 function main() {
@@ -43,6 +44,16 @@ function main() {
   let arr = [10, 20, 30, 40, 50];
   let n = arr.length;
   let max = -Infinity;
-  arrayRecus(arr, n, i, max);
+  console.log("maxi", arrayRecus(arr, n, i, max));
 }
 main();
+
+
+*/
+
+
+function isSorted() {
+
+  
+  
+}
