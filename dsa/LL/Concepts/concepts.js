@@ -157,10 +157,57 @@ class LinkedList {
     this.head = null;
   }
 
-  addFisrt(data) {
+  addFirst(data) {
     const newNode = new Node(data);
-    newNode.next = 
-    // newNode.head=data
-    // new
+    newNode.next = this.head;
+    this.head = newNode;
+  }
+  addLast(data) {
+    let newNode = new Node(data);
+    if (!this.head) {
+      this.head = newNode;
+      return;
+    }
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = newNode;
+  }
+  size() {
+    let count = 0;
+    let current = this.head;
+    while (current) {
+      count++;
+      current = current.next;
+    }
+    console.log("counerr", count);
+    return count;
+  }
+  insertAt(index, data) {
+    const newNode = new Node(data);
+    let current = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      current = current.next;
+    }
+    newNode.next = this.head;
+    this.head = newNode;
+  }
+  print() {
+    let current = this.head;
+
+    console.log("hello", current);
+    while (current) {
+      console.log(current.data);
+      current = current.next;
+    }
   }
 }
+const linkedlist = new LinkedList();
+linkedlist.addFirst(5);
+linkedlist.addFirst(3);
+linkedlist.addFirst(4);
+linkedlist.insertAt(1);
+linkedlist.addLast(10);
+linkedlist.print();
+// console.log(linkedlist.print());
