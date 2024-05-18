@@ -53,18 +53,29 @@
 // };
 
 // console.log(removeElement([3, 2, 2, 3], 3));
-var isPalindrome = function (x) {
-  let arr = x.split("");
-  let start = 0;
-  let end = x.length;
-  while (start < end) {
-    if (x[start] !== x[end]) {
-      return false;
-    } else {
-      start++;
-      end--;
+// var isPalindrome = function (x) {
+//   let arr = x.split("");
+//   let start = 0;
+//   let end = x.length;
+//   while (start < end) {
+//     if (x[start] !== x[end]) {
+//       return false;
+//     } else {
+//       start++;
+//       end--;
+//     }
+//   }
+//   return true;
+// };
+// isPalindrome(isPalindrome(-121));
+
+function creatingSubstr() {
+  let str = "hello";
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i; j < str.length; j++) {
+
+        // console.log(str[i] , str[j])
     }
   }
-  return true;
-};
-isPalindrome(isPalindrome(-121));
+}
+creatingSubstr()
