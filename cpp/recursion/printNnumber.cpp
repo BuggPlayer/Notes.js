@@ -21,27 +21,27 @@ Input: n = 1
 Output: 1
 
 */
-  int cnt=0;
 
-void printN(int n){
-       cout<<" "<< cnt;
-    if(n==cnt){
-        return;
-    }
-      cnt= cnt+1;
- 
-  
-printN(n);
-    
+
+void sum(int n){
+int a=0;
+if(n<1){
+    return;
+}
+// for(int i=0;i<n; i++){
+    a= a + n;
+// }
+// cout<<" "<<a;
+    sum(n-1);
 }
 
 
 int main(){
 
         cout<<"Enter the N number";
-        int n = 0;
+        int n = 1;
         cin>> n;
-        printN(n);
+        sum(n);
 
 return 0;
 }
