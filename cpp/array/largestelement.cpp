@@ -43,9 +43,49 @@ void secondlargetEle(){
     cout<<"max1 " << max1 << "max2 "<< max2;
 }
 
+
+bool issorted(){
+int arr[] = {1,2,6,3,4,5};
+int n=5;
+for (int i = 0; i < n; i++){
+for (int j = i+1; j< n; j++){
+
+   if(arr[j]< arr[i]){
+    return false;
+   }
+
+}
+}
+return true;
+
+}
+
+
+void removeDuplicate(){
+    // Input: nums = [0,0,1,1,1,2,2,3,3,4]
+    int arr [] = {0,0,1,1,1,2,2,3,3,4};
+    int n= 10;
+
+    int temp=arr[0];
+    
+    for(int i = 1; i < n; i++)
+    {
+     if(temp == arr[i]){
+        i++;
+
+     }  else {
+
+     }
+    }
+    
+
+}
+
 int main(){
 // largetEle();
-secondlargetEle();
+// secondlargetEle();
+int val= issorted();
+cout<<"val "<< val;
 
-    return 0;
+return 0;
 }
