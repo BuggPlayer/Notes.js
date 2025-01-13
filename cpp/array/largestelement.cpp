@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 
@@ -61,31 +62,97 @@ return true;
 }
 
 
-void removeDuplicate(){
+int removeDuplicate(){
     // Input: nums = [0,0,1,1,1,2,2,3,3,4]
-    int arr [] = {0,0,1,1,1,2,2,3,3,4};
-    int n= 10;
+   int arr[] = {0,0,1,1,1,2,2,3,3,4};
+   int n=10;
+    int temp=0;
+    for(int i = 1; i < n; i++){
 
-    int temp=arr[0];
-    
-    for(int i = 1; i < n; i++)
-    {
-     if(temp == arr[i]){
+     if(temp != arr[i]){
         i++;
-
-     }  else {
-
+        arr[temp] = arr[i];
      }
     }
-    
+    return temp + 1;
+}
 
+
+void moveallzeroRight(){
+   int arr[]={ 1 ,0 ,2 ,3 ,0 ,4 ,0 ,1};
+   int n=8;
+   vector<int> arrZero; 
+   vector<int> arrNonZero; 
+   vector<int> arrFinal;
+
+
+   for (int i = 0; i < n; i++) {
+    if(arr[i] ==0){
+      arrZero.push_back(arr[i]);
+    }else {
+      arrNonZero.push_back(arr[i]);
+    }
+
+   //  int size = arrZero.size();
+      for(int i = 0; i < arrNonZero.size(); i++) {
+          arrFinal.push_back(arrNonZero[i]);
+      }
+
+         for(int i = arrNonZero.size(); i < arrNonZero.size() ; i++) {
+                  arrFinal.push_back(arrNonZero[i]);
+         }
+
+         
+
+   }
+    
+}
+
+
+int LinearSearch(){
+
+// Example 1:
+// Input: arr[]= 1 2 3 4 5, num = 3
+// Output: 2
+// Explanation: 3 is present in the 2nd index
+
+int arr[] = {5,4,3,2,1};
+// 5 4 3 2 1
+int n=5;
+int num = 5;
+
+for (int i = 0; i <n; i++){
+
+      if(num == arr[i]){
+         return i;
+      }
+}
+
+return -1;
+}
+
+
+void print(vector<int> v) {
+  cout << "Printing vector " << endl;
+  int size = v.size();
+  for (int i = 0; i < size; i++) {
+    cout << v[i] << " ";
+    // cout << v.at(i) << " ";
+  }
+  cout << endl;
 }
 
 int main(){
 // largetEle();
 // secondlargetEle();
-int val= issorted();
-cout<<"val "<< val;
+// int val= issorted();
+// cout<<"val "<< val;
+// int v=removeDuplicate();
+// cout<<"v "<<v;
 
+// moveallzeroRight();
+
+int valueee = LinearSearch();
+cout<<"v"<< valueee;
 return 0;
 }
