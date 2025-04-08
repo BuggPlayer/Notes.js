@@ -132,18 +132,27 @@ return -1;
 }
 
 
-void FindMissingNumberrr(){
+int FindMissingNumberrr(){
   int arr[] = {1,2,4,5};
     int n = 5;
 
 
       for (int i = 0; i <= n; i++){
-         
-            if(arr[i] !=i  ){
-               cout <<" c" <<i;
-             // return i;
+           int flg=0;
+         for (int j= 0; i < n-1; j++){
+       
+            if(arr[j] != i){
+                flg=1;
+               break ;
             }
 
+         }
+         if(flg==0){
+            return i;
+         }
+         
+         
+         return -1;
     }
     
 }
@@ -157,6 +166,38 @@ void print(vector<int> v) {
   cout << endl;
 }
 
+// Input: a[] = [1, 2, 3, 4, 5], b[] = [1, 2, 3, 6, 7]
+// Output: 1 2 3 4 5 6 7
+// Explanation: Distinct elements including both the arrays are: 1 2 3 4 5 6 7.
+
+int findUnion(){
+//   int a[] = {1, 2, 3, 4, 5};
+//    int b[] = {1, 2, 3, 6, 7};
+vector<int> arr1 ={1, 2, 3, 4, 5};
+vector<int> arr2 =  {1, 2, 3, 6, 7};
+
+vector<int> unionar;
+// // int final [];
+for (int i = 0; i < 5; i++){
+   /* code */
+
+  unionar.push_back(arr1[i]);
+   
+}
+
+for (int i = 0; i < 5; i++){
+   /* code */
+if(arr2[i] != arr1[i]){
+   
+}
+  unionar.push_back(arr1[i]);
+   
+}
+
+
+
+}
+
 int main(){
 // largetEle();
 // secondlargetEle();
@@ -168,52 +209,8 @@ int main(){
 // moveallzeroRight();
 
 // int valueee = LinearSearch();
-// cout<<"v"<< valueee;
-FindMissingNumberrr();
+//
+int val= FindMissingNumberrr();
+ cout<<"v"<< val;
 return 0;
 }
-
-
-
-
-
-
-// int missingNumber(vector<int>&a, int N) {
-
-//     // Outer loop that runs from 1 to N:
-//     for (int i = 1; i <= N; i++) {
-
-//         // flag variable to check
-//         //if an element exists
-//         int flag = 0;
-
-//         //Search the element using linear search:
-//         for (int j = 0; j < N - 1; j++) {
-//             if (a[j] == i) {
-
-//                 // i is present in the array:
-//                 flag = 1;
-//                 break;
-//             }
-//         }
-
-//         // check if the element is missing
-//         //i.e flag == 0:
-
-//         if (flag == 0) return i;
-//     }
-
-//     // The following line will never execute.
-//     // It is just to avoid warnings.
-//     return -1;
-// }
-
-// int main()
-// {
-//     int N = 5;
-//     vector<int> a = {1, 2, 4, 5};
-//     int ans = missingNumber(a, N);
-//     cout << "The missing number is: " << ans << endl;
-//     return 0;
-// }
-
